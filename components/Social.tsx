@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link"
 import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa"
 
@@ -9,13 +8,15 @@ const socials = [
     { icon: <FaYoutube />, path: "" },
     { icon: <FaTwitter />, path: "" },
 ]
-const Social = () => {
+const Social = ({containerStyles, iconStyles} : {containerStyles: string, iconStyles: string}) => {
     return (
-        <div className="flex gap-6">
+        // "flex gap-6"
+        <div className={containerStyles}>
             {socials.map((item, index) => {
                 return (
                     <Link key={index} href={item.path}
-                        className="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500">
+                    // "w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                        className={iconStyles}>
                         {item.icon}
                     </Link>
                 )
