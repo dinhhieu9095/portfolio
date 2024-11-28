@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro }from "next/font/google";
+import { JetBrains_Mono }from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import { StairTransition } from "@/components/StairTransition";
 
-const be_vietnam_pro = Be_Vietnam_Pro({
-  variable: "--font-be_vietnam_pro",
+const jetbrains_mono = JetBrains_Mono({
+  variable: "--font-jetbrains_mono",
   weight: ["100","200"],
   subsets: ["latin"]
 });
@@ -20,10 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={be_vietnam_pro.variable}
+        className={jetbrains_mono.variable}
       >
         <Header />
-        {children}
+        <StairTransition />
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
