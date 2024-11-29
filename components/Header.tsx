@@ -6,18 +6,20 @@ import { MobileNav } from "./MobileNav"
 export const Header = () => {
   return (
     <header className="header">
-      <div className="mx-auto flex justify-between items-center">
+      <div className="mx-auto flex justify-between items-center container">
         <Link href={"/"} className="text-4xl font-semibold">
           <h1>Hieu<span className="text-accent text-xs">.NET</span></h1>
-        </Link>  
-        <div className="hidden xl:flex items-center gap-8">
-          <Nav />
+        </Link>
+        <div className="flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-8">
+            <Nav />
+          </div>
+          <div className="xl:hidden">
+            <MobileNav />
+          </div>
           <Link href={"/contact"}>
-            <Button>Hire me</Button>
+            <Button>Login</Button>
           </Link>
-        </div>
-        <div className="xl:hidden">
-          <MobileNav />
         </div>
       </div>
     </header>

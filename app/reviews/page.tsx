@@ -1,11 +1,16 @@
-export default function Resume () {
+export default function Reviews() {
   return (
     <>
       <section>
         <div>
-          ABOUT ME
+          BUTTON SUBMIT
         </div>
-
+        {/* POPUP FORM SUMIT */}
+      </section>
+      <section>
+        <div>
+          REVIEWS
+        </div>
       </section>
       <section>
         <div>

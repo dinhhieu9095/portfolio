@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Avatar } from "./ui/avatar"
 
 export const Photo = () => {
     return (
@@ -22,7 +21,7 @@ export const Photo = () => {
                             ease: "easeIn"
                         }
                     }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
+                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-darken absolute">
                     <Image src="/assests/avatar.jpg" priority quality={100} fill alt="" className="object-contain rounded-full"
                     />
                 </motion.div>

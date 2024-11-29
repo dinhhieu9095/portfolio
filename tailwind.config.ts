@@ -13,14 +13,16 @@ export default {
 		padding: "2rem"
 	},
 	fontFamily: {
-		primary: "var(--font-jetbrains_mono)",
+		mono: "var(--font-jetbrains_mono)",
+		primary: "var(--font-proxima-nova)",
+		header: "var(--font-brandon-grotesque)"
 	},
   	extend: {
   		colors: {
-  			primary: '#1c1c22',
+  			primary: 'white',
 			accent: {
-				DEFAULT: "#00FF99",
-				hover: "#00e187"
+				DEFAULT: "#00e187",
+				hover: "#00FF99"
 			}
   		}
   	}
