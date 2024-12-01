@@ -1,5 +1,9 @@
+import FadeInOnScroll from "@/components/PageTransition";
+
 export default function Contact() {
   return (
-    <div>Contact page</div>
+    <FadeInOnScroll>
+      <div>Contact page</div>
+    </FadeInOnScroll>
   )
 }

@@ -25,8 +25,8 @@ export const Nav = () => {
             links.map((link, index) => {
                 return (
                     <Link href={link.path} key={index} 
-                        className={`${link.path === pathname && "text-accent border-b-2 border-accent"} uppercase 
-                        font-medium hover:text-accent transition-all`}>
+                        className={`${link.path === pathname && "text-accent border-accent"} uppercase 
+                        font-medium hover:text-accent prefade`}>
                         {link.name}
                     </Link>
                 )

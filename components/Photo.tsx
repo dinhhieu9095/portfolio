@@ -8,7 +8,7 @@ export const Photo = () => {
             <motion.div 
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1, 
-                    transition: { delay: 2, duration: 0.4, ease: "linear" } 
+                    transition: { delay: 1, duration: 0.4, ease: "linear" } 
                     }}
                 className="relative">
                 <motion.div
@@ -16,7 +16,7 @@ export const Photo = () => {
                     animate={{
                         opacity: 1,
                         transition: {
-                            delay: 2.4,
+                            delay: 1.4,
                             duration: 0.4,
                             ease: "easeIn"
                         }

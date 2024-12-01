@@ -13,9 +13,8 @@ export default {
 		padding: "2rem"
 	},
 	fontFamily: {
-		mono: "var(--font-jetbrains_mono)",
-		primary: "var(--font-proxima-nova)",
-		header: "var(--font-brandon-grotesque)"
+		primary: "var(--font-fira_sans)",
+		header: "var(--font-fira_sans)"
 	},
   	extend: {
   		colors: {
@@ -23,7 +22,8 @@ export default {
 			accent: {
 				DEFAULT: "#00e187",
 				hover: "#00FF99"
-			}
+			},
+			even: 'hsla(60,10%,96.08%,1)'
   		}
   	}
   },

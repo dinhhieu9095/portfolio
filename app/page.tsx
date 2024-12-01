@@ -1,20 +1,24 @@
+import PageTransition from "@/components/PageTransition";
 import { Photo } from "@/components/Photo";
 import Social from "@/components/Social";
 import { Stats } from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi"
+import Resume from "./resume/page";
+import Reviews from "./reviews/page";
 export default function Home () {
   return (
-    <>
-    <section className="h-full bg-[hsla(60,10%,96.08%,1)]">
+          
+    <PageTransition>
+    <section className="h-full bg-even prefade">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">.NET Developer</span>
-            <h1 className="h1 mb-6">
-              Hello I&apos;m <br /> <span className="text-accent">Hieu Nguyen Dinh</span>
+            <h2 className="h2 prefade">.NET Developer</h2>
+            <h1 className="h1 mb-6 prefade">
+              <span className="text-accent">Hieu Nguyen Dinh</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-black/80">
+            <p className="max-w-[500px] mb-9 text-black/80 prefade">
               After all... I&apos;m just a .NET developer, looking for a company, and asking them to hire me.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -35,6 +39,8 @@ export default function Home () {
       </div>
     </section>
     <Stats />
-    </>
+    <Resume />
+    <Reviews />
+    </PageTransition>
   );
 }
