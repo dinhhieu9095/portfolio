@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { Button } from "./ui/button"
 import { Nav } from "./Nav"
 import { MobileNav } from "./MobileNav"
 import AuthButtons from "./ButtonLogin"
@@ -18,9 +17,7 @@ export const Header = () => {
           <div className="xl:hidden">
             <MobileNav />
           </div>
-          <Link href={"/contact"} className="prefade">
             <AuthButtons />
-          </Link>
         </div>
       </div>
     </header>

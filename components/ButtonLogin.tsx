@@ -1,14 +1,18 @@
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn } from "@/auth"
 import { Button } from "./ui/button";
+import { auth } from "../auth"
 import Image from "next/image"
 
-const AuthButtons = () => {
-    const { data: session } = useSession();
-
+const AuthButtons = async () => {
+    const session = await auth()
     return (
         <div>
+            
             {!session ? (
-                <Button onClick={() => signIn("google")}>Login</Button>
+                <Button onClick={async () => {
+                    "use server"
+                    await signIn("google")
+                }}>Login</Button>
             ) : (
                 <>
                     <Image

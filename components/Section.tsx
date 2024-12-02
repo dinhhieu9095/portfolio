@@ -23,8 +23,8 @@ export default function Section({
         <>
             {data.map((item, index) => {
                 return (
-                    <>
-                        <section className="min-h-[66vh]" key={`header-ab-${index}`}>
+                    <div key={`header-ab-${index}`}>
+                        <section className="min-h-[66vh]">
                             <div className={`relative bg-fixed bg-center bg-no-repeat bg-cover object-cover min-h-[66vh] flex justify-center items-center`}
                                 style={{
                                     backgroundImage: `url(${item.image})`,
@@ -59,7 +59,7 @@ export default function Section({
                             )
                         })}
 
-                    </>
+                    </div>
 
                 )
             })}
