@@ -1,21 +1,5 @@
 import Image from "next/image"
-interface Section {
-    image: string;
-    name: string;
-    description: string;
-    isRound?: boolean;
-    title?: string;
-}
-
-interface DataItem {
-    image: string;
-    title: string;
-    sections: Section[];
-}
-
-type ResumeProps = {
-    data: DataItem[];
-};
+import { ResumeProps } from './type/type'
 export default function Section({
     data
 }: ResumeProps) {

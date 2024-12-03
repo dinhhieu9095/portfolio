@@ -1,6 +1,8 @@
 import NextAuth, { Session } from "next-auth"
 import Google from "next-auth/providers/google"
 import "next-auth/jwt"
+import { stringify } from "querystring"
+import { use } from "react"
  
 declare module "next-auth/jwt" {
   /** Returned by the `jwt` callback and `auth`, when using JWT sessions */
@@ -36,6 +38,24 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       console.log('session.idToken')
       console.log(session.accessToken)
       return session;
-    }
+    },
+    async signIn({ user, account, profile }) {
+      if (account?.id_token) {
+        const response = await fetch('https://localhost:44356/api/Auth/register', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${account?.id_token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({email: user.email,
+            name: user.name, image: user.image})
+        }).then();
+        if (!response.ok) {
+          console.error('Failed to register user:', response.statusText);
+          throw new Error(`Registration failed: ${response.status}`);
+        }
+      }
+      return true;
+    },
   },
 })
