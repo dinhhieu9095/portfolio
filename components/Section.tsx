@@ -42,7 +42,7 @@ export default function Section({
                                     <div className="relative flex flex-col items-start gap-8 xl:grid xl:grid-cols-12 xl:grid-rows-12 container xl:gap-x-4 xl:gap-y-2">
                                         <div className="col-start-1 col-end-4 row-span-full flex flex-row items-center justify-center box-content gap-8">
                                             < Image src={section.image} priority quality={100} objectFit="cover" layout="fill" alt="" 
-                                                className={`${section.isRound? '!w-[80%] !h-[80%] !rounded-full': '!w-[100%] !h-[80%] !rounded-xl'} !relative`}
+                                                className={`${section.isRound? '!w-[80%] !h-[80%] !rounded-full': '!w-[100%] !h-[80%] !rounded-xl'} !relative prefade`}
                                             />
                                         </div>
                                         {/* Details */}
